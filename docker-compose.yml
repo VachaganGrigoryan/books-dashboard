@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  dashboard:
+    container_name: dashboard
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - BACKEND_HOST=localhost
+      - BACKEND_PORT=8000
+    volumes:
+      - .:/app
+      - /app/node_modules
+    expose:
+      - 3000
+    ports:
+      - 5000:3000
+    command: serve -s build
+    restart: always

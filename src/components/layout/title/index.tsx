@@ -9,7 +9,7 @@ export const Title: React.FC<TitleProps> = ({ collapsed }) => (
     {collapsed ? (
       <img
         src={'/refine-collapsed.svg'}
-        alt="Refine"
+        alt="Books Home"
         style={{
           display: 'flex',
           alignItems: 'center',
